@@ -13,3 +13,16 @@ Estrutura de dados na qual cada elementos é precedido por um elemento e sucedid
 + Modelaremos usando um arranjo de registros;
 + Registros conterão as informações de interesse do usuário;
 + Nosso arranjo terá um tamanho fixo e controlaremos o número de elementos com uma variável adicional;
+
+## Stack
++ Estrutura de dados do tipo linear TADs (Tipo Abstrato de Dados). 
++ Segue o padrão LIFO (Last-in-first-out) ou FILO (First-in-last-out).
+
+### Modelagem:
++ O acesso sempre é no topo da estrutura (pense em uma pilha de louças).
+
+### Métodos:
++ `push(valor)`: adiciona um valor arbitrário ao topo da pilha.
++ `pop()`: remove o elemento do topo.
++ `top()/peek()`: lê o valor que pertence ao topo da pilha.
++ `isEmpty()`: booleano que verifica se a pilha está vazia.
