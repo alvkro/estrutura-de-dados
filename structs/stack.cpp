@@ -8,12 +8,16 @@ private:
   T *stack_data;
 
 public:
-  stack(value_type capacity = 10) { T *stack_data = new T[capacity]; }
+  stack(int capacity = 10) { T *stack_data = new T[capacity]; }
   ~stack() { delete[] stack_data; }
 
-  void push(int value) {
-    top_stack++;
-    stack_data[top_stack] = value;
+  void push(T value) {
+    if (isEmpty()) {
+      std::cerr << "Erro: stack cheia !" << std::endl;
+    } else {
+      top_stack++;
+      stack_data[top_stack] = value;
+    }
   }
 
   bool pop() {
@@ -39,4 +43,3 @@ public:
     return false;
   }
 };
-
