@@ -26,3 +26,11 @@ Estrutura de dados na qual cada elementos é precedido por um elemento e sucedid
 + `pop()`: remove o elemento do topo.
 + `top()/peek()`: lê o valor que pertence ao topo da pilha.
 + `isEmpty()`: booleano que verifica se a pilha está vazia.
+
+## Lista encadeada:
++ Diferente da lista sequencial, a lista encadeada é uma estrutura de dados TADs que armazena uma lista não-contígua, isto é, são várias informações espalhadas pela memória, mas ainda assim estão ligadas por nodes, justaposto por ponteiros por exemplo.
++ O TADs tem dois membros principais: o valor contido na lista e o ponteiro apontando para o next/previous.
+
+### Representação da Lista Encadeada:
++ `data`: informação contida naquele espaço de memória.
++ `next`: ponteiro apontando para o próximo `node`.
