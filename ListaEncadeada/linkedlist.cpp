@@ -114,14 +114,40 @@ public:
         tail = backHead;
     }
 
-    LinkedList merge(LinkedList& l1, LinkedList& l2) {
+    LinkedList merge(LinkedList& list) {
         LinkedList newList;
-        l1.head->next = l2.head;
+        this->tail->next = list.head;
 
-        newList.head = l1.head;
-        newList.tail = l2.tail;
+        newList.head = this->head;
+        newList.tail = list.tail;
 
         newList.sortList();
+
+        Node* currNode = newList.head;
+
+        while (currNode->next != nullptr) {
+            currNode = currNode->next;
+        }
+        newList.tail = currNode;
+
+        return newList;
+    }
+
+    LinkedList merge(LinkedList& list1, LinkedList& list2) {
+        LinkedList newList;
+        list1.head->next = list2.head;
+
+        newList.head = list1.head;
+        newList.tail = list2.head;
+
+        newList.sortList();
+
+        Node* currNode = newList.head;
+
+        while (currNode->next != nullptr) {
+            currNode = currNode->next;
+        }
+        newList.tail = currNode;
 
         return newList;
     }
@@ -146,9 +172,10 @@ int main() {
     std::cout << "//- Linked List: \n";
     myList1.printLinkedList();
     myList1.invert();
+
     std::cout << "//- Linked List: (Invert)\n";
     myList1.printLinkedList();
+
     std::cout << "//- Merging two lists: \n";
-    LinkedList newList = myList1.merge(myList1, myList2);
-    newList.printLinkedList();
+    myList1.merge(myList2).printLinkedList();
 }
