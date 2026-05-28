@@ -38,7 +38,7 @@ Estrutura de dados na qual cada elementos é precedido por um elemento e sucedid
 # Tabelas de Dispersão (Hash Tables):
 + *Endereçamento Direto:* Método que usa dois vetores: um dedicado para o armazenamento das chaves e outro para as informações relacionadas com a posição da chave. Possui limitações de acordo com o conjunto (pense na definição matemática) das chaves, que a quantidade é proporcional à quantidade de informações, tornando-se imprático para alguns casos...
 
-# Função Hash + Tabelas Hash:
+## Função Hash + Tabelas Hash:
 + Essa função recebe como parâmetros uma chave *X* e a quantidade de valores *M* associados na chave, retornando uma posição *P* [`h(X;M) = P`.
 
 -> `h(X;M) = X mod M (alternativamente, X % M)` [Hash Modular]
