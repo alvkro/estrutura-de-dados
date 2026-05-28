@@ -69,6 +69,21 @@ public:
         }
     }
 
+    void remove(LinkedList& L, int value) {
+        Node* curr = L.head;
+        Node* prev = L.head;
+
+        while (curr->data != value) {
+            if (curr == nullptr) {
+                return;
+            }
+            prev = curr;
+            curr = curr->next;
+        }
+        prev->next = curr->next;
+        delete curr;
+    }
+
     void sortList() {
         if (head == nullptr) {
             return;
@@ -168,6 +183,7 @@ int main() {
     myList2.addToBack(1);
     myList2.addToBack(5);
     myList2.addToBack(67);
+    // myList2.remove(myList2, 67);
 
     std::cout << "//- Linked List: \n";
     myList1.printLinkedList();
